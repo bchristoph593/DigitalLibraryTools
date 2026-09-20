@@ -1,0 +1,45 @@
+[Javascript TextDocReader-Bookmarklet]
+ javascript:(function() { 
+ var script = document.createElement("script"); 
+ script.setAttribute('type', 'text/javascript');
+ script.innerHTML += 'function nextParagraph(evt) { ';
+ script.innerHTML += '	pNext = evt.currentTarget.param_nextParagraph; ';
+ script.innerHTML += '	if (evt.key == " " || evt.code == "Space" || evt.keyCode == 32) { ';
+ script.innerHTML += '		const pgNodeArr = document.getElementsByClassName("paragraph article__item"); ';
+ script.innerHTML += '		pgNodeArr[pNext - 1].style = "border-left:0px solid black; border-right:0px solid black; padding-left:0px; padding-right:0px;"; ';
+ script.innerHTML += '		console.log("Spacebar Key Pressed."); ';
+ script.innerHTML += '		const node = pgNodeArr[pNext]; ';
+ script.innerHTML += '		node.style = "border-left:1px solid black; border-right:1px solid black; padding-left:5px; padding-right:5px;"; ';
+ script.innerHTML += '		if(! document.getElementById("button_p"+pNext)) { ';
+ script.innerHTML += '			var focusBtnLabel = "-----"; ';
+ script.innerHTML += '			pText = node.innerHTML; ';
+ script.innerHTML += '			pText = pText+ "<br><input id=\'button_p"+pNext+"\' type=\'button\' value=\'"+ focusBtnLabel+ "\' />"; ';
+ script.innerHTML += '			node.innerHTML = pText; ';
+ script.innerHTML += '		} ';
+ script.innerHTML += '		document.getElementById("button_p"+pNext).focus(); ';
+ script.innerHTML += '	} ';
+ script.innerHTML += '}; '; 
+ script.innerHTML += 'function invokeReader() { ';
+ script.innerHTML += '	const pgNodeArr = document.getElementsByClassName("paragraph article__item"); ';
+ script.innerHTML += '	const node2 = pgNodeArr[0]; ';
+ script.innerHTML += '	node2.style = "border-left:1px solid black; border-right:1px solid black; padding-left:5px; padding-right:5px"; ';
+ script.innerHTML += '	if(! document.getElementById("button_p0")) { ';
+ script.innerHTML += '		var focusBtnLabel = "-----"; ';
+ script.innerHTML += '		pText = node2.innerHTML; ';
+ script.innerHTML += '		pText = pText+ "<br><input id=\'button_p0\' type=\'button\' value=\'"+ focusBtnLabel+ "\' />"; ';
+ script.innerHTML += '		node2.innerHTML = pText; ';
+ script.innerHTML += '	} ';
+ script.innerHTML += '	document.getElementById("button_p0").focus(); ';
+ script.innerHTML += '	arrLength = pgNodeArr.length; ';
+ script.innerHTML += '	for(var i=0; i<arrLength; i++) { ';
+ script.innerHTML += '		pgNodeArr[i].addEventListener("keyup", nextParagraph, false ); ';
+ script.innerHTML += '		pgNodeArr[i].param_nextParagraph = (i+1); ';
+ script.innerHTML += '	} ';
+ script.innerHTML += '}; ';
+ document.head.appendChild(script); 
+ invokeReader();
+ })();
+
+[Javascript SingleLine TextDocReader-Bookmarklet]
+ javascript:(function() { var script = document.createElement("script");  script.setAttribute('type', 'text/javascript'); script.innerHTML += 'function nextParagraph(evt) { '; script.innerHTML += '	pNext = evt.currentTarget.param_nextParagraph; '; script.innerHTML += '	if (evt.key == " " || evt.code == "Space" || evt.keyCode == 32) { '; script.innerHTML += '		const pgNodeArr = document.getElementsByClassName("paragraph article__item"); '; script.innerHTML += '		pgNodeArr[pNext - 1].style = "border-left:0px solid black; border-right:0px solid black; padding-left:0px; padding-right:0px;"; '; script.innerHTML += '		console.log("Spacebar Key Pressed."); '; script.innerHTML += '		const node = pgNodeArr[pNext]; '; script.innerHTML += '		node.style = "border-left:1px solid black; border-right:1px solid black; padding-left:5px; padding-right:5px;"; ';  script.innerHTML += '		if(! document.getElementById("button_p"+pNext)) { ';  script.innerHTML += '			var focusBtnLabel = "-----"; '; script.innerHTML += '			pText = node.innerHTML; '; script.innerHTML += '			pText = pText+ "<br><input id=\'button_p"+pNext+"\' type=\'button\' value=\'"+ focusBtnLabel+ "\' />"; '; script.innerHTML += '			node.innerHTML = pText; '; script.innerHTML += '		} '; script.innerHTML += '		document.getElementById("button_p"+pNext).focus(); '; script.innerHTML += '	} '; script.innerHTML += '}; ';  script.innerHTML += 'function invokeReader() { '; script.innerHTML += '	const pgNodeArr = document.getElementsByClassName("paragraph article__item"); '; script.innerHTML += '	const node2 = pgNodeArr[0]; '; script.innerHTML += '	node2.style = "border-left:1px solid black; border-right:1px solid black; padding-left:5px; padding-right:5px"; ';  script.innerHTML += '	if(! document.getElementById("button_p0")) { ';  script.innerHTML += '		var focusBtnLabel = "-----"; '; script.innerHTML += '		pText = node2.innerHTML; '; script.innerHTML += '		pText = pText+ "<br><input id=\'button_p0\' type=\'button\' value=\'"+ focusBtnLabel+ "\' />"; '; script.innerHTML += '		node2.innerHTML = pText; '; script.innerHTML += '	} '; script.innerHTML += '	document.getElementById("button_p0").focus(); '; script.innerHTML += '	arrLength = pgNodeArr.length; '; script.innerHTML += '	for(var i=0; i<arrLength; i++) { '; script.innerHTML += '		pgNodeArr[i].addEventListener("keyup", nextParagraph, false ); '; script.innerHTML += '		pgNodeArr[i].param_nextParagraph = (i+1); '; script.innerHTML += '	} '; script.innerHTML += '}; '; document.head.appendChild(script);  invokeReader(); })();
+ 
