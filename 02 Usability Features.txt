@@ -1,6 +1,8 @@
 
 + Author: B. Christoph;
 
++ Email: bchristoph593@gmail.com
+
 + 'Benutzbarkeit.'; 'Usability Features.':
   - Wird ein WebTextDocument im WebBrowser geladen,
     sodann kann das pgReader-Bookmarklet genutzt werden.

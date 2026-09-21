@@ -1,6 +1,8 @@
 
 + Author: B. Christoph;
 
++ Email: bchristoph593@gmail.com
+
 + Setup: Add some Bookmarklet to the BookmarksBar:
   - Schritte zum Einblenden der 'Lesezeichen-Symbolleiste.':
     -> Per Rechtsklick: 
