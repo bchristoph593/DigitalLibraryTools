@@ -1,0 +1,20 @@
+
++ Author: B. Christoph;
+
++ 'Benutzbarkeit.'; 'Usability Features.':
+  - Wird ein WebTextDocument im WebBrowser geladen,
+    sodann kann das pgReader-Bookmarklet genutzt werden.
+  
+  - Wird dass Bookmarklet ('z.B. pgReader Tagesschau.de') angeklickt,
+	sodann wird die TextSummary selektiert. ('Seitenränder vom Paragraph.')
+  
+  - Weiter wird ein sog. 'Focus Input Button' am Ende der Summary beigefügt
+    und der Fokus auf diesen Button gesetzt.
+  
+  - Wird nun die 'Leertaste' gedrückt, wird die Summary deselektiert,
+    der erste Paragraph selektiert, sowie der Fokus auf
+	den beigefügten 'Focus Input Button' gesetzt.
+  
+  - Somit können nun die einzelnen Paragraphen vom WebTextDocument
+    nacheinander mit der 'Leertaste' iteriert werden.
+  
