@@ -1,0 +1,26 @@
+
++ Author: B. Christoph;
+
++ Setup: Add some Bookmarklet to the BookmarksBar:
+  - Schritte zum Einblenden der 'Lesezeichen-Symbolleiste.':
+    -> Per Rechtsklick: 
+		Klicken Sie ganz oben in der Tableiste (neben den offenen Tabs) auf eine freie Fläche 
+		mit der rechten Maustaste und wählen Sie den Eintrag 'Lesezeichen-Symbolleiste' aus.
+	-> Per Tastaturkürzel: 
+		Drücken Sie gleichzeitig die Tasten Strg + Umschalt + B (unter Windows/Linux) 
+		bzw. Cmd + Umschalt + B (unter macOS), um die Leiste ein- oder auszublenden.
+  
+  - Lesezeichen hinzufügen:
+    -> Per Rechtsklick:
+		Klicken Sie ganz oben in der Lesezeichen-Leiste auf eine freie Fläche 
+		mit der rechten Maustaste und wählen 'Lesezeichen hinzufügen' aus.
+		
+		Im Feld 'Name' geben sie nun eine Bezeichnung für das Bookmarklet an
+		(z.B. 'PgReader Tagesschau.de').
+		
+		Im Feld 'Adresse' geben sie nun den einzeiligen JavaScriptCode
+		für das Bookmarklet an.
+		(z.B. das Bookmarklet befindet sich unter 'https://github.com/bchristoph593/DigitalLibraryTools/tree/main/Bookmarklet%20ParagraphReader')
+		  in der Datei 'pgReader_Focus_Tagesschau.txt'
+		  im Abschnitt '[Javascript SingleLine TextDocReader-Bookmarklet]').
+		  
